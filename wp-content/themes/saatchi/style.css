@@ -924,3 +924,18 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+/*--------------------------------------------------------------
+## Custom Style
+--------------------------------------------------------------*/
+.site-header hgroup h2 {
+  clear: none;
+}
+
+body,
+input,
+button {
+  color: #1c1c1c;
+  font-family: Verdana, sans-serif;
+  font-weight: normal;
+}

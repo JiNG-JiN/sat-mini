@@ -1,0 +1,28 @@
+# ----------------------------------------------------------------------
+# Enable Gzip compression for all CSS and JS files, if the user's
+# browser sends request headers to accept them
+# ----------------------------------------------------------------------
+<ifModule mod_deflate.c>
+	<filesMatch "\.(js|css)$">
+		SetOutputFilter DEFLATE
+	</filesMatch>
+</ifModule>
+
+
+# ----------------------------------------------------------------------
+# Set the types for all audio, video and fonts
+# ----------------------------------------------------------------------
+# Audio
+AddType audio/ogg                      oga ogg
+AddType audio/mp4                      m4a
+
+# Video
+AddType video/ogg                      ogv
+AddType video/mp4                      mp4 m4v
+AddType video/webm                     webm
+
+# Webfonts
+AddType application/vnd.ms-fontobject  eot
+AddType application/x-font-ttf         ttf ttc
+AddType font/opentype                  otf
+AddType application/x-font-woff        woff

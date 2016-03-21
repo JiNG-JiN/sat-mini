@@ -8,23 +8,41 @@
  *
  * @package saatchi
  */
-
-?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+$styles_path = get_stylesheet_directory_uri();
+?>
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1,requiresActiveX=true">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="dns-prefetch" href="//ajax.googleapis.com">
+<meta name="robots" content="all">
+<link rel="icon" href="<?php echo $styles_path . '/assets/image/favicon.png'; ?>">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<link rel='stylesheet' href='<?php echo $styles_path . '/assets/css/style.1439995701721.css' ?>'>
+
+<script src="<?php echo $styles_path . '/assets/js/libs/html5media.min.js'; ?>"></script>
+<script type="text/javascript">
+var imgLoaded = function(img) { img.className = img.className ? img.className + ' loaded' : 'loaded'; }
+</script>
+<!--[if lt IE 9]>
+<script src="<?php echo $styles_path . '/assets/js/libs/html5shiv.min.js'; ?>"></script>
+<![endif]-->
 
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
-<div id="page" class="site">
+<body data-section="" data-base-url="<?php echo site_url() ?>" <?php body_class() ?>>
+<div id="wrapper">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'saatchi' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
+<!--
 		<div class="site-branding">
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
@@ -39,12 +57,55 @@
 				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 			<?php
 			endif; ?>
-		</div><!-- .site-branding -->
+        </div>
+-->
+<!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+      <div class="full-width cf">
+        <hgroup class="logo cf">
+            <?php if (isset($office_logo) && ($office_logo != '')): ?>
+            <h1><a href="<?php echo site_url() ?>" style="background:url('<?php echo $styles_path . '/assets/image/' . $office_logo;?>') left center no-repeat">Saatchi &amp; Saatchi</a></h1>
+            <?php else: ?>
+            <h1><a href="<?php echo site_url() ?>">Saatchi &amp; Saatchi</a></h1>
+            <?php endif; ?>
+            <h2><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Greater China</a></h2>
+        </hgroup>
+      </div><!-- end .full-width -->
+
+      <div class="fixed-header">
+		<nav id="site-navigation" class="main-navigation site-nav" role="navigation">
+          <div class="full-width cf">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'saatchi' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			<?php //wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+            <?php
+                wp_nav_menu(array(
+                'theme_location' => 'primary',
+                'container' => false,
+                'menu_id' => 'primary-menu',
+                'depth' => 1,
+                // This one is the important part:
+                'walker' => new Saatchi_Walker_Nav_Menu
+                ));
+            ?>
+            </div>
 		</nav><!-- #site-navigation -->
+    </div>
+
+<!--
+      <div class="fixed-header">
+        <nav class="site-nav">
+          <div class="full-width cf">
+            <ul class="cf drawer">
+              <li class="cf home<?php if ( $parent_section == 'home' ): ?> active<?php endif ?>"><a href="<?= site_url($idiom) ?>"<?php if ( !isset($genealogy[1]) ): ?> class="active"<?php endif ?>><?=$translation['home']?></a></li>
+            <?php foreach ( $nav as $item ): ?>
+                <li class="cf <?= $item['token'] ?><?php if ( $parent_section == $item['token'] ): ?> active<?php endif ?>"><a href="<?= site_url($idiom.'/'.$item['token']) ?>"><?= $item['title'] ?></a></li>
+            <?php endforeach ?>
+            </ul>
+          </div>
+        </nav>
+        ?>
+      </div>
+-->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

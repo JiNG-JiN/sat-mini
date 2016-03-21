@@ -150,3 +150,81 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/** add custom functions by Jung **/
+function doctype_opengraph($output) {
+    return $output . '
+    xmlns:og="http://opengraphprotocol.org/schema/"
+    xmlns:fb="http://www.facebook.com/2008/fbml"';
+}
+add_filter('language_attributes', 'doctype_opengraph');
+
+function fb_opengraph() {
+    global $post;
+
+    $except = "The Lovemarks company. Nothing is impossible.";
+    $img_src = get_stylesheet_directory_uri() . '/assets/image/profile.png';
+    $title = the_title();
+    $url = the_permalink();
+    $site_name = get_bloginfo();
+
+    if(is_single()) {
+        if(has_post_thumbnail($post->ID)) {
+            $img_src = wp_get_attachment_image_src(get_post_thumbnail_id( $post->ID ), 'medium');
+        } else {
+            $img_src = get_stylesheet_directory_uri() . '/img/opengraph_image.jpg';
+        }
+        if($excerpt = $post->post_excerpt) {
+            $excerpt = strip_tags($post->post_excerpt);
+            $excerpt = str_replace("", "'", $excerpt);
+        } else {
+            $excerpt = get_bloginfo('description');
+        }
+    }
+    ?>
+    <meta property="og:title" content="<?php echo $title ?>"/>
+    <meta property="og:description" content="<?php echo $excerpt ?>"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="<?php echo $url ?>"/>
+    <meta property="og:site_name" content="<?php echo $site_name ?>"/>
+    <meta property="og:image" content="<?php echo $img_src ?>"/>
+<?php
+}
+//add_action('wp_head', 'fb_opengraph', 5);
+
+class Saatchi_Walker_Nav_Menu extends Walker_Nav_Menu {
+	/**
+	 * Start the element output.
+	 *
+	 * @see Walker::start_el()
+	 *
+	 * @since 3.0.0
+	 * @since 4.4.0 'nav_menu_item_args' filter was added.
+	 *
+	 * @param string $output Passed by reference. Used to append additional content.
+	 * @param object $item   Menu item data object.
+	 * @param int    $depth  Depth of menu item. Used for padding.
+	 * @param array  $args   An array of arguments. @see wp_nav_menu()
+	 * @param int    $id     Current item ID.
+	 */
+	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+		$classes[] = 'cf';
+        parent::start_el($output, $item, $depth, $args);
+	}
+
+	/**
+	 * Ends the element output, if needed.
+	 *
+	 * @see Walker::end_el()
+	 *
+	 * @since 3.0.0
+	 *
+	 * @param string $output Passed by reference. Used to append additional content.
+	 * @param object $item   Page data object. Not used.
+	 * @param int    $depth  Depth of page. Not Used.
+	 * @param array  $args   An array of arguments. @see wp_nav_menu()
+	 */
+	public function end_el( &$output, $item, $depth = 0, $args = array() ) {
+		$output .= "</li>\n";
+	}
+}
