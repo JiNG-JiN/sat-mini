@@ -82,8 +82,8 @@ var imgLoaded = function(img) { img.className = img.className ? img.className + 
                 'theme_location' => 'primary',
                 'container' => false,
                 'menu_id' => 'primary-menu',
+                'menu_class' => 'cf drawer',
                 'depth' => 1,
-                // This one is the important part:
                 'walker' => new Saatchi_Walker_Nav_Menu
                 ));
             ?>
@@ -91,21 +91,6 @@ var imgLoaded = function(img) { img.className = img.className ? img.className + 
 		</nav><!-- #site-navigation -->
     </div>
 
-<!--
-      <div class="fixed-header">
-        <nav class="site-nav">
-          <div class="full-width cf">
-            <ul class="cf drawer">
-              <li class="cf home<?php if ( $parent_section == 'home' ): ?> active<?php endif ?>"><a href="<?= site_url($idiom) ?>"<?php if ( !isset($genealogy[1]) ): ?> class="active"<?php endif ?>><?=$translation['home']?></a></li>
-            <?php foreach ( $nav as $item ): ?>
-                <li class="cf <?= $item['token'] ?><?php if ( $parent_section == $item['token'] ): ?> active<?php endif ?>"><a href="<?= site_url($idiom.'/'.$item['token']) ?>"><?= $item['title'] ?></a></li>
-            <?php endforeach ?>
-            </ul>
-          </div>
-        </nav>
-        ?>
-      </div>
--->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
