@@ -8,9 +8,8 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<div id="primary" class="full-width cf">
+      <section class="page news inset cf">
 
 		<?php
 		while ( have_posts() ) : the_post();
@@ -20,16 +19,20 @@ get_header(); ?>
 			the_post_navigation();
 
 			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+            if(1 != 1):
+                if ( comments_open() || get_comments_number() ) :
+                    comments_template();
+                endif;
+            endif;
 
 		endwhile; // End of the loop.
 		?>
 
-		</main><!-- #main -->
+		</section><!-- #section -->
 	</div><!-- #primary -->
-
+    <hr class="shadow">
+	<div id="primary" class="full-width cf">
+    </div>
 <?php
 get_sidebar();
 get_footer();

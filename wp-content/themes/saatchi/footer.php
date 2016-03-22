@@ -14,10 +14,11 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'saatchi' ) ); ?>"><?php //printf( esc_html__( 'Proudly powered by %s', 'saatchi' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php //printf( esc_html__( 'Theme: %1$s by %2$s.', 'saatchi' ), 'saatchi', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+		<div class="site-info full-width cf">
+            <h1>Saatchi &amp; Saatchi</h1>
+        <?php if (is_active_sidebar( 'first-footer-widget-area' )):?>
+        <?php dynamic_sidebar( 'first-footer-widget-area' ); ?>
+        <?php endif;?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

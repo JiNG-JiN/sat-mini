@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div id="post-<?php $id = the_ID(); ?>" <?php post_class('primary-content'); ?>>
 	<header class="entry-header">
 		<?php
 			if ( is_single() ) {
@@ -25,7 +25,9 @@
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
-
+	<div class="entry-content">
+        <?php saatchi_post_thumbnail($id, 'medium');?>
+    </div>
 	<div class="entry-content">
 		<?php
 			the_content( sprintf(
@@ -44,4 +46,4 @@
 	<footer class="entry-footer">
 		<?php saatchi_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+</div><!-- #post-## -->

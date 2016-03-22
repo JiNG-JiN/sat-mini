@@ -26,15 +26,15 @@ function saatchi_posted_on() {
 
 	$posted_on = sprintf(
 		esc_html_x( 'Posted on %s', 'post date', 'saatchi' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		$time_string
 	);
 
-	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'saatchi' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-	);
+	// $byline = sprintf(
+		// esc_html_x( 'by %s', 'post author', 'saatchi' ),
+		// '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+	// );
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+	echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
 
 }
 endif;
@@ -119,3 +119,9 @@ function saatchi_category_transient_flusher() {
 }
 add_action( 'edit_category', 'saatchi_category_transient_flusher' );
 add_action( 'save_post',     'saatchi_category_transient_flusher' );
+
+function saatchi_post_thumbnail($post_id = null, $size) {
+    if(has_post_thumbnail($post_id)) {
+        return the_post_thumbnail($size);
+    }
+}
