@@ -1,0 +1,24 @@
+#saatchi_meta{
+    overflow: hidden;
+    padding-bottom: 1em;
+}
+
+#saatchi_meta p{
+    clear: both;
+}
+
+.saatchi-row-title{
+    display: block;
+    float: left;
+    width: 200px;
+}
+
+.saatchi-row-content{
+    float: left;
+    padding-bottom: 1em;
+}
+
+.saatchi-row-content label{
+    display: block;
+    line-height: 1.75em;
+}
