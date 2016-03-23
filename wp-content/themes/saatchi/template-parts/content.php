@@ -1,5 +1,4 @@
-<?php
-/**
+<?php /**
  * Template part for displaying posts.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
@@ -8,7 +7,6 @@
  */
 
 ?>
-
 <div id="post-<?php $id = the_ID(); ?>" <?php post_class('primary-content'); ?>>
 	<header class="entry-header">
 		<?php
@@ -26,7 +24,7 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 	<div class="entry-content">
-        <?php saatchi_post_thumbnail($id, 'medium');?>
+        <?php saatchi_post_thumbnail($id, array(753,422));?>
     </div>
 	<div class="entry-content">
 		<?php
@@ -47,3 +45,20 @@
 		<?php saatchi_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </div><!-- #post-## -->
+    <?php
+        $media_contact = get_post_meta( get_the_ID(), 'media-contact', true );
+        if( !empty( $media_contact ) ) {
+            $content = htmlspecialchars_decode($media_contact);
+            $content = wpautop( $content );
+        ?>
+        <div class="secondary-content">
+            <aside class="extra-content">
+                <h1>Notes</h1>
+                <div class="text">
+                <?php echo $content;?>
+                </div>
+            </aside>
+</div>
+        <?php
+        }
+    ?>
