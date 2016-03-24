@@ -12,22 +12,18 @@
  * @package saatchi
  */
 
-get_header(); ?>
+get_header();
+global $post;
+$slug = $post->post_name;
+?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="full-width cf">
 		<main id="main" class="site-main" role="main">
 
 			<?php
-			while ( have_posts() ) : the_post();
-
-				get_template_part( 'template-parts/content', 'page' );
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
-			endwhile; // End of the loop.
+                if($slug == 'blog') {
+                    get_template_part( 'template-parts/blog-list', get_post_format() );
+                }
 			?>
 
 		</main><!-- #main -->
