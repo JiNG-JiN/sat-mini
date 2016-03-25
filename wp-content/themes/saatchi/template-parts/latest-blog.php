@@ -16,7 +16,7 @@ $query = new WP_Query( $args );
 if ( $query->have_posts() ) {
 ?>
 <section class="media-boxes cf">
-<h1>Latest Blog</h1>
+<h4>Latest Blog</h4>
     <?php while ( $query->have_posts() ) {
         $query->the_post();
     ?>

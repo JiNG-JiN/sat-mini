@@ -25,7 +25,7 @@ $styles_path = get_stylesheet_directory_uri();
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link rel='stylesheet' href='<?php echo $styles_path . '/assets/css/style.1439995701721.css' ?>'>
-
+<script src="<?php echo $styles_path . '/assets/js/libs/jquery-1.9.1.js'; ?>"></script>
 <script src="<?php echo $styles_path . '/assets/js/libs/html5media.min.js'; ?>"></script>
 <script type="text/javascript">
 var imgLoaded = function(img) { img.className = img.className ? img.className + ' loaded' : 'loaded'; }
