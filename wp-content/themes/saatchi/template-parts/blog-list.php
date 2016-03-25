@@ -6,7 +6,6 @@
  *
  * @package saatchi
  */
-
 $style_width = get_image_width('thumbnail') . 'px';
 $cat_id = get_cat_ID( 'blog' );
 $args = array(

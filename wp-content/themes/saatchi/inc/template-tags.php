@@ -25,7 +25,7 @@ function saatchi_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'saatchi' ),
+		esc_html_x( '- %s', 'post date', 'saatchi' ),
 		$time_string
 	);
 
@@ -220,3 +220,4 @@ function get_excerpt($limit){
     $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
     return $excerpt;
 }
+

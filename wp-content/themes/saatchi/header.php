@@ -83,12 +83,12 @@ var imgLoaded = function(img) { img.className = img.className ? img.className + 
                 'container' => false,
                 'menu_id' => 'primary-menu',
                 'menu_class' => 'cf drawer',
-                'depth' => 1,
+                'depth' => 2,
                 'walker' => new Saatchi_Walker_Nav_Menu
                 ));
             ?>
             </div>
-		</nav><!-- #site-navigation -->
+		</nav><!-- site-navigation -->
     </div>
 
 	</header><!-- #masthead -->

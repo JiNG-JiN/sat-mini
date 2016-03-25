@@ -938,3 +938,6 @@ button {
   font-family: Verdana, sans-serif;
   font-weight: normal;
 }
+.sub-nav {
+    width:100%;
+}
