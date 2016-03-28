@@ -938,6 +938,7 @@ button {
   font-family:'Times New Roman',Verdana, sans-serif;
   font-weight: normal;
 }
+.sub-nav { width:100%;}
 .full-width{padding:0;}
 .site-content .full-width{max-width:100%;padding:0;}
 .home-content {}
@@ -1049,9 +1050,3 @@ button {
 #contact-us textarea{resize:none;width:87%;}
 #contact-us .defaultText{position:absolute;margin:0;top:10em;left:4px;z-index:100;color:#afadad;font-size:1em;}
 #contact-us button{margin-top:1em;padding: 0.5em 1.2em;background:#e5e5e5;border:0 none;box-shadow:none;text-shadow: none;-webkit-appearance:none;font-family:Verdana;font-size:1em;font-weight:700;}
-
-
-
-
-
-

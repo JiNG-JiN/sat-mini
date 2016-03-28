@@ -9,7 +9,7 @@ define('DB_NAME', 'saatchi-mini');
 define('DB_USER', 'saatchi-mini');
 
 /** MySQL database password */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'saatchi-mini');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');

@@ -125,13 +125,14 @@ add_action( 'widgets_init', 'saatchi_widgets_init' );
  */
 function saatchi_scripts() {
 	wp_enqueue_style( 'saatchi-style', get_stylesheet_uri() );
-
-	wp_enqueue_script( 'saatchi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+    wp_enqueue_script('jquery');
+	// wp_enqueue_script( 'saatchi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'saatchi-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'saatchi-image-load', get_template_directory_uri() . '/assets/js/min/script.min.js', array(), '20160322', true );
-	
+	wp_enqueue_script( 'saatchi-mini', get_template_directory_uri() . '/js/saatchi-mini.js', array(), '20160322', true );
+
 	wp_enqueue_script( 'saatchi-homepage', get_template_directory_uri() . '/js/main.js', array(), '20160325', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -216,6 +217,17 @@ function current_nav_class($classes, $item) {
 }
 
 class Saatchi_Walker_Nav_Menu extends Walker_Nav_Menu {
+
+	public function start_lvl( &$output, $depth = 0, $args = array() ) {
+		$indent = str_repeat("\t", $depth);
+		$output .= "\n$indent<nav class=\"sub-nav\"><ul class=\"full-width cf\">\n";
+	}
+
+	public function end_lvl( &$output, $depth = 0, $args = array() ) {
+		$indent = str_repeat("\t", $depth);
+		$output .= "$indent</ul></nav>\n";
+	}
+
 	/**
 	 * Start the element output.
 	 *
