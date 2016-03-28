@@ -1253,7 +1253,7 @@ img.loaded {
   bottom: 0;
 }
 .no-touch .media-box:hover header,
-.no-touch .media-box.expanded header {
+.touch .media-box.expanded header {
   height: 18em;
   -webkit-transition: height 0.3s ease-in-out;
   -moz-transition: height 0.3s ease-in-out;
@@ -1262,9 +1262,9 @@ img.loaded {
   transition: height 0.3s ease-in-out;
 }
 .no-touch .media-box:hover header .intro,
-.no-touch .media-box.expanded header .intro,
+.touch .media-box.expanded header .intro,
 .no-touch .media-box:hover header .social,
-.no-touch .media-box.expanded header .social {
+.touch .media-box.expanded header .social {
   visibility: visible;
   opacity: 1;
   -webkit-transition: opacity 0.3s ease-in-out 0.2s;
@@ -1274,14 +1274,14 @@ img.loaded {
   transition: opacity 0.3s ease-in-out 0.2s;
 }
 .no-touch .media-box:hover .image-frame img,
-.no-touch .media-box.expanded .image-frame img {
+.touch .media-box.expanded .image-frame img {
   opacity: 0.3;
 }
 .no-touch .media-box.media-box.media-box--showcase .play-video:hover {
   background: url(../image/play-black.png) center no-repeat #ffffff;
 }
 .no-touch .media-box.no_link:hover header,
-.no-touch .media-box.no_link.expanded header {
+.touch .media-box.no_link.expanded header {
   height: 5.8em;
 }
 .no-touch .media-box.no_link .image-frame img {

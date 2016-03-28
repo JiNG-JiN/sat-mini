@@ -98,66 +98,63 @@
 	</div>
 	<div class="part5">
 		<div class="content-container">
-		<ul class="cf">
-			<li>
+		<ul class="clearer">
+			<li class="item1">
 				<dl>
 					<dt>Strategy</dt>
-					<dd>Shopper Understanding <span class="arrow-icon"></span></dd>
-					<dd>eTailer <span class="arrow-icon"></span></dd>
-					<dd>Digital Marketing <span class="arrow-icon"></span></dd>
-					<dd>Strategy Building <span class="arrow-icon"></span></dd>
+					<dd class="fst"><img src="/wp-content/themes/saatchi/images/shopper.png"/><span class="arrow-icon">Shopper Understanding </span></dd>
+					<dd class="sec"><img src="/wp-content/themes/saatchi/images/etailer.png"/><span class="arrow-icon">eTailer </span></dd>
+					<dd class="thd"><img src="/wp-content/themes/saatchi/images/digital.png"/><span class="arrow-icon">Digital Marketing </span></dd>
+					<dd class="lst"><img src="/wp-content/themes/saatchi/images/building.png"/><span class="arrow-icon">Strategy Building </span></dd>
 					<a href="#" class="more">Read More ></a>
 				</dl>
 			</li>
-			<li>
+			<li class="item2">
 				<dl>
 					<dt>Creative</dt>
-					<dd>Shopper Understanding <span class="arrow-icon"></span></dd>
-					<dd>eTailer <span class="arrow-icon"></span></dd>
-					<dd>Digital Marketing <span class="arrow-icon"></span></dd>
-					<dd>Strategy Building <span class="arrow-icon"></span></dd>
+					<dd class="fst"><img src="/wp-content/themes/saatchi/images/campaign.png"/><span class="arrow-icon">Campaign</span></dd>
+					<dd class="sec"><img src="/wp-content/themes/saatchi/images/online.png"/><span class="arrow-icon">Online Display Assets</span></dd>
+					<dd class="thd"><img src="/wp-content/themes/saatchi/images/products.png"/><span class="arrow-icon">Products Assets</span></dd>
+					<dd class="lst"><img src="/wp-content/themes/saatchi/images/brand.png"/><span class="arrow-icon">Brand Content</span></dd>
 					<a href="#" class="more">Read More ></a>
 				</dl>
 			</li>
-			<li>
+			<li class="item3">
 				<dl>
 					<dt>Ideas</dt>
-					<dd>Shopper Understanding</dd>
-					<dd>Shopper Understanding <span class="arrow-icon"></span></dd>
-					<dd>eTailer <span class="arrow-icon"></span></dd>
-					<dd>Digital Marketing <span class="arrow-icon"></span></dd>
-					<dd>Strategy Building <span class="arrow-icon"></span></dd>
+					<dd class="fst"><img src="/wp-content/themes/saatchi/images/campaign.png"/><span class="arrow-icon">Campaign </span></dd>
+					<dd class="sec"><img src="/wp-content/themes/saatchi/images/online.png"/><span class="arrow-icon">Online Display Assets</span></dd>
+					<dd class="thd"><img src="/wp-content/themes/saatchi/images/products.png"/><span class="arrow-icon">Products Assets</span></dd>
+					<dd class="lst"><img src="/wp-content/themes/saatchi/images/brand.png"/><span class="arrow-icon">Brand Content</span></dd>
 					<a href="#" class="more">Read More ></a>
 				</dl>
 			</li>
-			<li>
+			<li class="item4">
 				<dl>
-					<dt>Strategy</dt>
-					<dd>Shopper Understanding <span class="arrow-icon"></span></dd>
-					<dd>eTailer <span class="arrow-icon"></span></dd>
-					<dd>Digital Marketing <span class="arrow-icon"></span></dd>
-					<dd>Strategy Building <span class="arrow-icon"></span></dd>
+					<dt>Activation</dt>
+					<dd class="fst"><img src="/wp-content/themes/saatchi/images/design.png"/><span class="arrow-icon">Design</span></dd>
+					<dd class="sec"><img src="/wp-content/themes/saatchi/images/shopper.png"/><span class="arrow-icon">Marketplaces</span></dd>
+					<dd class="thd"><img src="/wp-content/themes/saatchi/images/mobile.png"/><span class="arrow-icon">Mobile</span></dd>
+					<dd class="lst"><img src="/wp-content/themes/saatchi/images/website.png"/><span class="arrow-icon">Website</span></dd>
 					<a href="#" class="more">Read More ></a>
 				</dl>
 			</li>
-			<li>
+			<li class="item5">
 				<dl>
-					<dt>Creative</dt>
-					<dd>Shopper Understanding <span class="arrow-icon"></span></dd>
-					<dd>eTailer <span class="arrow-icon"></span></dd>
-					<dd>Digital Marketing <span class="arrow-icon"></span></dd>
-					<dd>Strategy Building <span class="arrow-icon"></span></dd>
+					<dt>Acquisition</dt>
+					<dd class="fst"><img src="/wp-content/themes/saatchi/images/shopper.png"/><span class="arrow-icon">Marketplaces</span></dd>
+					<dd class="sec"><img src="/wp-content/themes/saatchi/images/search.png"/><span class="arrow-icon">Content & Search</span></dd>
+					<dd class="thd"><img src="/wp-content/themes/saatchi/images/social.png"/><span class="arrow-icon">Social Networks</span></dd>
+					<dd class="lst"><img src="/wp-content/themes/saatchi/images/online-ad.png"/><span class="arrow-icon">Online Advertising</span></dd>
 					<a href="#" class="more">Read More ></a>
 				</dl>
 			</li>
-			<li>
+			<li class="item6">
 				<dl>
-					<dt>Ideas</dt>
-					<dd>Shopper Understanding</dd>
-					<dd>Shopper Understanding <span class="arrow-icon"></span></dd>
-					<dd>eTailer <span class="arrow-icon"></span></dd>
-					<dd>Digital Marketing <span class="arrow-icon"></span></dd>
-					<dd>Strategy Building <span class="arrow-icon"></span></dd>
+					<dt>Operations</dt>
+					<dd class="fst"><img src="/wp-content/themes/saatchi/images/customer-service.png"/>Customer Service <span class="arrow-icon"></span></dd>
+					<dd class="sec"><img src="/wp-content/themes/saatchi/images/order-mange.png"/>Order Management <span class="arrow-icon"></span></dd>
+					<dd class="lst"><img src="/wp-content/themes/saatchi/images/crm.png"/>CRM <span class="arrow-icon"></span></dd>
 					<a href="#" class="more">Read More ></a>
 				</dl>
 			</li>
@@ -171,7 +168,43 @@
 		</div>
 	</div>
 	<div class="part7">
-		
+		<div class="content-container">
+			<h4>Upcoming Events</h4>
+			<ul class="clearer">
+			<li class="item1">
+				<header><h2>Join our Free Webinars in English – Increase your knowledge and leverage...</h2></header>
+				<div class="content">
+					<p class="post-on">1 JUL 2016</p>
+					<h3>Shanghai, Handerson Plaza, 23th floor</h3>
+					<p class="intro">
+						Saatchi & Saatchi has grown from a start-up advertising agency in London in 1970 to a global creative communications company headquartered in New York with 130 offices in 70 countries and over 6500 employees.  
+					</p>
+					<a class="join" href="javascript:;">JOIN</a>
+				</div>
+			</li>
+			<li class="item2">
+				<header><h2>Essential elements to minimize your “bounce rate” in China</h2></header>
+				<div class="content">
+					<p class="post-on">1 JUL 2016</p>
+					<h3>Shanghai, Handerson Plaza, 23th floor</h3>
+					<p class="intro">
+						Saatchi & Saatchi has grown from a start-up advertising agency in London in 1970 to a global creative communications company headquartered in New York with 130 offices in 70 countries and over 6500 employees.  
+					</p>
+					<a class="join" href="javascript:;">JOIN</a>
+				</div>
+			</li>
+			<li class="item3">
+				<header><h2>eCommerce Market in China 2014 – Latest Market Figures</h2></header>
+				<div class="content">
+					<p class="post-on">1 JUL 2016</p>
+					<h3>Shanghai, Handerson Plaza, 23th floor</h3>
+					<p class="intro">
+						Saatchi & Saatchi has grown from a start-up advertising agency in London in 1970 to a global creative communications company headquartered in New York with 130 offices in 70 countries and over 6500 employees.  
+					</p>
+					<a class="join" href="javascript:;">JOIN</a>
+				</div>
+			</li>
+		</div>
 	</div>
 	
 </div>
