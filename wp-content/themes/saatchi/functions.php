@@ -133,6 +133,8 @@ function saatchi_scripts() {
 	wp_enqueue_script( 'saatchi-image-load', get_template_directory_uri() . '/assets/js/min/script.min.js', array(), '20160322', true );
 	wp_enqueue_script( 'saatchi-mini', get_template_directory_uri() . '/js/saatchi-mini.js', array(), '20160322', true );
 
+	wp_enqueue_script( 'saatchi-homepage', get_template_directory_uri() . '/js/main.js', array(), '20160325', true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
