@@ -16,7 +16,11 @@ get_header();
 global $post;
 $slug = $post->post_name;
 ?>
-    <?php get_template_part( 'template-parts/slider', get_post_format() );?>
+    <?php
+        if($slug == 'top') {
+            get_template_part( 'template-parts/slider', get_post_format() );
+        }
+    ?>
 	<div id="primary" class="full-width cf">
 		<main id="main" class="site-main" role="main">
 
