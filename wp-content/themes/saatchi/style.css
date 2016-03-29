@@ -1141,9 +1141,18 @@ button {
 	.footer-top dl dt.over{background-image:url(images/arrow-open-touch.png)}
 	.footer-top dl dd{display:none;}
 }
+@media only screen and (max-width: 425px) {
+	.ms-bullets.ms-dir-h{display:none !important}
+	.home-content .part1 h2,
+	.home-content .part1 h4{font-size:1.625em;}
+	.home-content .part1 h3{font-size:1.25em;}
+	.home-content .part3{font-size:1.2em;}
+}
 @media only screen and (max-width: 375px) {
 	.events-slideshow .prev,
 	.events-slideshow .next{top:37%}
+
+	
 }
 
 
