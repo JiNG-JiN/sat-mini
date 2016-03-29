@@ -67,6 +67,7 @@ function create_event_post() {
         'has_archive' => true,
         'hierarchical' => false,
         'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'post-formats' ),
+        'taxonomies' => array( 'eventcategory', 'post_tag')
     )
   );
 }
@@ -78,6 +79,7 @@ add_action( 'init', 'create_event_post' );
 
 function saatchi_post_note_meta() {
     add_meta_box('post_note', __('Media Contact','saatchi'), 'post_note_callback', 'post');
+    add_meta_box('post_event', __('Event Info','saatchi'), 'event_info_callback', 'event', 'side', 'core');
 }
 add_action( 'add_meta_boxes', 'saatchi_post_note_meta' );
 
@@ -91,6 +93,21 @@ function post_note_callback() {
     ));
 }
 
+function event_info_callback() {
+    global $post;
+    wp_nonce_field( basename(__FILE__), 'saatchi_nonce' );
+    $stored_meta = get_post_meta( $post->ID );
+    $meta_sd = isset($stored_meta['date-st']) ? $stored_meta['date-st'][0] : '';
+    $meta_ed = isset($stored_meta['date-ed']) ? $stored_meta['date-ed'][0] : '';
+    $date_format = get_option('date_format');
+    if ($meta_sd == null) { $meta_sd = time(); $meta_ed = $meta_sd;}
+
+    $clean_sd = date("D, M d, Y", $meta_sd);
+    $clean_ed = date("D, M d, Y", $meta_ed);
+    wp_editor(htmlspecialchars_decode($media_contact) , 'event-info', array(
+        "media_buttons" => true
+    ));
+}
 /**
  * Saves the custom meta input
  */
