@@ -28,6 +28,50 @@ function saatchi_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'saatchi_body_classes' );
 
+/*
+ * remove open sans font
+ */
+if(!function_exists('remove_web_fonts')):
+    function remove_web_fonts() {
+        wp_deregister_style( 'open-sans' );
+        wp_register_style( 'open-sans', false );
+    }
+    add_action('admin_enqueue_scripts', 'remove_web_fonts');
+endif;
+
+/*
+ * add events post type
+ */
+function create_event_post() {
+  register_post_type( 'event',
+    array(
+        'labels' => array(
+            'name' => __( 'Events', 'Events', 'saatchi' ),
+            'singular_name' => __( 'Event', 'Event', 'saatchi' ),
+            'add_new_item' => __( 'Add New Event', 'saatchi'),
+            'new_item'           => __( 'New Event', 'saatchi' ),
+            'edit_item'          => __( 'Edit Event', 'saatchi' ),
+            'view_item'          => __( 'View Event', 'saatchi' ),
+            'all_items'          => __( 'All Events', 'saatchi' ),
+            'search_items'       => __( 'Search Events', 'saatchi' ),
+            'not_found'          => __( 'No Events found.', 'saatchi' ),
+            'not_found_in_trash' => __( 'No Events found in Trash.', 'saatchi' )
+    ),
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite' => array( 'slug' => 'event' ),
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'post-formats' ),
+    )
+  );
+}
+add_action( 'init', 'create_event_post' );
+
 /**
  * Adds Media Contact meta box to the post editing screen
  */
@@ -42,10 +86,9 @@ function post_note_callback() {
     wp_nonce_field( 'media_contact', 'saatchi_nonce' );
     $saatchi_stored_meta = get_post_meta( $post->ID );
     $media_contact = isset($saatchi_stored_meta['media-contact']) ? $saatchi_stored_meta['media-contact'][0] : '';
-     wp_editor(htmlspecialchars_decode($media_contact) , 'media-contact', array(
- "media_buttons" => true
- ));
-
+    wp_editor(htmlspecialchars_decode($media_contact) , 'media-contact', array(
+        "media_buttons" => true
+    ));
 }
 
 /**
