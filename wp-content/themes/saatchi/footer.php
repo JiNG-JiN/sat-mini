@@ -74,7 +74,14 @@
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-
+<script>
+	var Site = {
+		basePath: document.body.getAttribute('data-base-url'),
+		idiom: document.body.getAttribute('data-idiom'),
+		userAgent: navigator.userAgent,
+		platform: navigator.platform
+	};
+</script>
 <?php wp_footer(); ?>
 
 </body>
