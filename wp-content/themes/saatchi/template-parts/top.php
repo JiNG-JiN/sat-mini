@@ -106,7 +106,7 @@
 					<a href="#">STRATEGY ></a>
 				</div>
 			</div>
-			
+
 			<div class="item item2">
 				<p class="title"><img src="/wp-content/themes/saatchi/images/st2.png">CREATIVE/IDEAS</p>
 				<div class="popup2 popup">
@@ -114,7 +114,7 @@
 					<a href="#">CREATIVE ></a>
 				</div>
 			</div>
-			
+
 			<div class="item item3">
 				<p class="title"><img src="/wp-content/themes/saatchi/images/st3.png">ACTIVATION</p>
 				<div class="popup3 popup">
@@ -122,7 +122,7 @@
 					<a href="#">ACTIVATION ></a>
 				</div>
 			</div>
-			
+
 			<div class="item item4">
 				<p class="title"><img src="/wp-content/themes/saatchi/images/st4.png">ACQUISITION</p>
 				<div class="popup4 popup">
@@ -130,7 +130,7 @@
 					<a href="#">ACQUISITION ></a>
 				</div>
 			</div>
-			
+
 			<div class="item item5">
 				<p class="title"><img src="/wp-content/themes/saatchi/images/st5.png">OPERATIONS</p>
 				<div class="popup5 popup">
@@ -138,7 +138,7 @@
 					<a href="#">OPERATIONS ></a>
 				</div>
 			</div>
-			
+
 		</div>
 	</div>
 	</div>
@@ -205,7 +205,7 @@
 				</dl>
 			</li>
 		</ul>
-			
+
 		</div>
 	</div>
 	<div class="part6">
@@ -213,44 +213,5 @@
 			<?php get_template_part( 'template-parts/latest-blog', get_post_format() );?>
 		</div>
 	</div>
-	<div class="part7">
-		<div class="content-container">
-			<h4>Upcoming Events</h4>
-			<ul class="clearer events-slideshow">
-			<li class="item1 slide">
-				<header><h2>Join our Free Webinars in English – Increase your knowledge and leverage...</h2></header>
-				<div class="content">
-					<p class="post-on">1 JUL 2016</p>
-					<h3>Shanghai, Handerson Plaza, 23th floor</h3>
-					<p class="intro">
-						Saatchi & Saatchi has grown from a start-up advertising agency in London in 1970 to a global creative communications company headquartered in New York with 130 offices in 70 countries and over 6500 employees.  
-					</p>
-					<a class="join" href="javascript:;">JOIN</a>
-				</div>
-			</li>
-			<li class="item2 slide">
-				<header><h2>Essential elements to minimize your “bounce rate” in China</h2></header>
-				<div class="content">
-					<p class="post-on">1 JUL 2016</p>
-					<h3>Shanghai, Handerson Plaza, 23th floor</h3>
-					<p class="intro">
-						Saatchi & Saatchi has grown from a start-up advertising agency in London in 1970 to a global creative communications company headquartered in New York with 130 offices in 70 countries and over 6500 employees.  
-					</p>
-					<a class="join" href="javascript:;">JOIN</a>
-				</div>
-			</li>
-			<li class="item3 slide">
-				<header><h2>eCommerce Market in China 2014 – Latest Market Figures</h2></header>
-				<div class="content">
-					<p class="post-on">1 JUL 2016</p>
-					<h3>Shanghai, Handerson Plaza, 23th floor</h3>
-					<p class="intro">
-						Saatchi & Saatchi has grown from a start-up advertising agency in London in 1970 to a global creative communications company headquartered in New York with 130 offices in 70 countries and over 6500 employees.  
-					</p>
-					<a class="join" href="javascript:;">JOIN</a>
-				</div>
-			</li>
-		</div>
-	</div>
-	
+			<?php set_query_var('limit', 3); get_template_part( 'template-parts/events-list', get_post_format() );?>
 </div>

@@ -9,6 +9,7 @@ wp-content/upgrade/
 wp-content/wp-cache-config.php
 wp-content/plugins/hello.php
 wp-content/debug.log
+nbproject/
 
 /.htaccess
 /license.txt
@@ -16,3 +17,4 @@ wp-content/debug.log
 /sitemap.xml
 /sitemap.xml.gz
 /test/
+/nbproject/private/

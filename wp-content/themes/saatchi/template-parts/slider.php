@@ -14,5 +14,5 @@
 ?>
 <?php
     // echo do_shortcode("[metaslider id=48]");
-    masterslider(1);
+    masterslider(2);
 ?>
