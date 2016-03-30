@@ -1059,14 +1059,24 @@ button {
 .part4-touch .popup{display:none;padding:0.5em 0 2em;border-bottom:1px solid #dfdfdf;color:#838383;font-size:0.875em;font-family:Verdana}
 .part4-touch .popup a{background: #000;color: #fff;display: block;font-size:1em;font-weight: bold;height: 2.5em;line-height: 2.5em;margin:1.375em 0 0;text-align: center;text-decoration: none;width: 11em;}
 
+.sub-nav{display:none;}
+.sub-nav ul li:first-child{margin-left:0;}
+.sub-nav ul li a{color:#838383;}
+.sub-nav ul li a:hover,
+.sub-nav ul li.active a{color:#2295d2}
+.site-nav ul li.current-menu-parent a, 
+.site-nav ul li.current-menu-parent a:hover, 
+.site-nav ul li.current-menu-parent a:focus {background: #000 none repeat scroll 0 0;border-left: 1px solid #000;box-shadow: -2px 0 0 -1px #232323, 2px 0 0 -1px #232323;color:#fff;}
+
 @media only screen and (max-width: 1299px) {
   .part4-notouch{display:none;}
   .part4-touch,
   .part4-touch .popup1{display:block;}
-  .content-container{padding:0 1em;}
+  .content-container{padding:0 1.2em;}
 }
 
 @media only screen and (max-width: 960px) {
+	.full-width{padding:0 1.2em}
 	.home-content .part5{padding-top:4em}
 	.home-content .part5 ul li{float:none;width:100%;margin-right:0;}
 	.home-content .part5 dl{min-height:0px;padding:0;margin:0;}
@@ -1115,13 +1125,13 @@ button {
 	.blog-slideshow .prev,
 	.blog-slideshow .next,
 	.events-slideshow .prev,
-	.events-slideshow .next{position:absolute;top:58%;left:0;width:20px;height:58px;background:#c3c3c3 url(images/left-arrow.png) 50% 50% no-repeat;z-index:99}
+	.events-slideshow .next{position:absolute;top:58%;left:-0.6em;width:1.2em;height:3.63em;background:#c3c3c3 url(images/left-arrow.png) 50% 50% no-repeat;z-index:99}
 	
 	.events-slideshow .prev,
 	.events-slideshow .next{top:34%}
 	
 	.blog-slideshow .next,
-	.events-slideshow .next{left:auto;right:0;background-image:url(images/right-arrow.png)}
+	.events-slideshow .next{left:auto;right:-0.6em;background-image:url(images/right-arrow.png)}
 	
 	.blog-slideshow .prev:hover,
 	.blog-slideshow .next:hover,
@@ -1131,15 +1141,19 @@ button {
 	.home-content .part7 li .join{margin-top:2em}
 	.home-content .part7 li .intro{}
 	
-	#contact-us,.footer-top dl{float:none;margin:0;padding:0 1em;}
+	#contact-us,.footer-top dl{float:none;margin:0;}
 	#contact-us input,
 	#contact-us textarea{width:100%;}
-	#contact-us .defaultText{left:1.1em;top:8.1em;}
+	#contact-us .defaultText{left:0.2em;top:8.1em;}
 	.footer-top dl {margin-top:2em;padding-top:0.5em;border-top:1px solid #dfdfdf;}
 	.footer-top dl.last{margin:0;}
 	.footer-top dl dt{background:url(images/arrow-close-touch.png) 98% 50% no-repeat;}
 	.footer-top dl dt.over{background-image:url(images/arrow-open-touch.png)}
 	.footer-top dl dd{display:none;}
+}
+@media only screen and (max-width: 769px) {
+	.site-nav ul li.current-menu-parent{display:block;}
+	.sub-nav ul li:first-child{margin-left:17px;}
 }
 @media only screen and (max-width: 425px) {
 	.ms-bullets.ms-dir-h{display:none !important}

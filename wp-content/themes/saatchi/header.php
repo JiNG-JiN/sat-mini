@@ -72,9 +72,10 @@ var imgLoaded = function(img) { img.className = img.className ? img.className + 
       </div><!-- end .full-width -->
 
       <div class="fixed-header">
-		<nav id="site-navigation" class="main-navigation site-nav" role="navigation">
+		<nav class="site-nav" role="navigation">
           <div class="full-width cf">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'saatchi' ); ?></button>
+			<!--<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'saatchi' ); ?></button>-->
+			<a class="handle" href="#">≡</a>
 			<?php //wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
             <?php
                 wp_nav_menu(array(
