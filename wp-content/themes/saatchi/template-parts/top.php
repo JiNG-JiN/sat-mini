@@ -159,7 +159,7 @@
 				</dl>
 			</li>
 		</ul>
-			
+
 		</div>
 	</div>
 	<div class="part6">
@@ -167,44 +167,5 @@
 			<?php get_template_part( 'template-parts/latest-blog', get_post_format() );?>
 		</div>
 	</div>
-	<div class="part7">
-		<div class="content-container">
-			<h4>Upcoming Events</h4>
-			<ul class="clearer">
-			<li class="item1">
-				<header><h2>Join our Free Webinars in English – Increase your knowledge and leverage...</h2></header>
-				<div class="content">
-					<p class="post-on">1 JUL 2016</p>
-					<h3>Shanghai, Handerson Plaza, 23th floor</h3>
-					<p class="intro">
-						Saatchi & Saatchi has grown from a start-up advertising agency in London in 1970 to a global creative communications company headquartered in New York with 130 offices in 70 countries and over 6500 employees.  
-					</p>
-					<a class="join" href="javascript:;">JOIN</a>
-				</div>
-			</li>
-			<li class="item2">
-				<header><h2>Essential elements to minimize your “bounce rate” in China</h2></header>
-				<div class="content">
-					<p class="post-on">1 JUL 2016</p>
-					<h3>Shanghai, Handerson Plaza, 23th floor</h3>
-					<p class="intro">
-						Saatchi & Saatchi has grown from a start-up advertising agency in London in 1970 to a global creative communications company headquartered in New York with 130 offices in 70 countries and over 6500 employees.  
-					</p>
-					<a class="join" href="javascript:;">JOIN</a>
-				</div>
-			</li>
-			<li class="item3">
-				<header><h2>eCommerce Market in China 2014 – Latest Market Figures</h2></header>
-				<div class="content">
-					<p class="post-on">1 JUL 2016</p>
-					<h3>Shanghai, Handerson Plaza, 23th floor</h3>
-					<p class="intro">
-						Saatchi & Saatchi has grown from a start-up advertising agency in London in 1970 to a global creative communications company headquartered in New York with 130 offices in 70 countries and over 6500 employees.  
-					</p>
-					<a class="join" href="javascript:;">JOIN</a>
-				</div>
-			</li>
-		</div>
-	</div>
-	
+			<?php set_query_var('limit', 3); get_template_part( 'template-parts/events-list', get_post_format() );?>
 </div>

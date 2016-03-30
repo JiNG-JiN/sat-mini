@@ -39,6 +39,13 @@ function saatchi_posted_on() {
 }
 endif;
 
+if ( ! function_exists( 'saatchi_event_st' ) ) :
+    function saatchi_event_st($timestamp) {
+        $date_format = get_option('date_format');
+        return date($date_format, $timestamp);
+    }
+endif;
+
 if ( ! function_exists( 'saatchi_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
@@ -221,3 +228,11 @@ function get_excerpt($limit){
     return $excerpt;
 }
 
+function excerpt($num) {
+    $limit = $num+1;
+    $content = get_the_excerpt() ? get_the_excerpt() : the_content();
+    $excerpt = explode(' ', $content , $limit);
+    array_pop($excerpt);
+    $excerpt = implode(" ",$excerpt)."... ";
+    echo $excerpt;
+}
