@@ -18151,7 +18151,7 @@ if ( typeof define === 'function' && define.amd ) {
 				this.blogSlideshow = new HeroSlideshow({ el: '.blog-slideshow' });
 				this.blogSlideshow.pause();
 			}
-			
+	
 			if ( this.$('.events-slideshow').length > 0 && $(window).width() < 961) {
 				this.eventsSlideshow = new HeroSlideshow({ el: '.events-slideshow' });
 				this.eventsSlideshow.pause();
