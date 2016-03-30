@@ -17,7 +17,7 @@ global $post;
 $slug = $post->post_name;
 ?>
     <?php
-        if($slug == 'top') {
+        if($slug == 'eshopper') {
             get_template_part( 'template-parts/slider', get_post_format() );
         }
     ?>
@@ -30,7 +30,7 @@ $slug = $post->post_name;
                     case 'blog':
                         get_template_part( 'template-parts/blog-list', get_post_format() );
                         break;
-                    case 'top':
+                    case 'eshopper':
                         get_template_part( 'template-parts/top', get_post_format() );
                         break;
                     default:

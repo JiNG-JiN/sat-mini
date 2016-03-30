@@ -21,7 +21,7 @@
 	<div class="part3">
 	WE CREATE ECOMMERCE LEADERS
 	</div>
-	<div class="part4">
+	<div class="part4 part4-notouch">
 	<div class="content-container">
 		<div class="item-container">
 			<div class="item item1">
@@ -93,6 +93,52 @@
 				<p>Saatchi & Saatchi has grown from a start-up advertising agency in London in 1970 to a global creative communications company headquartered in New York with 130 offices in 70 countries and over 6500 employees.  </p>
 				<a href="#">OPERATIONS ></a>
 			</div>
+		</div>
+	</div>
+	</div>
+	<div class="part4-touch">
+	<div class="content-container">
+		<div class="item-container">
+			<div class="item item1">
+				<p class="title over"><img src="/wp-content/themes/saatchi/images/st1.png">STRATEGY</p>
+				<div class="popup1 popup">
+					<p>Saatchi & Saatchi has grown from a start-up advertising agency in London in 1970 to a global creative communications company headquartered in New York with 130 offices in 70 countries and over 6500 employees.  </p>
+					<a href="#">STRATEGY ></a>
+				</div>
+			</div>
+
+			<div class="item item2">
+				<p class="title"><img src="/wp-content/themes/saatchi/images/st2.png">CREATIVE/IDEAS</p>
+				<div class="popup2 popup">
+					<p>Saatchi & Saatchi has grown from a start-up advertising agency in London in 1970 to a global creative communications company headquartered in New York with 130 offices in 70 countries and over 6500 employees.  </p>
+					<a href="#">CREATIVE ></a>
+				</div>
+			</div>
+
+			<div class="item item3">
+				<p class="title"><img src="/wp-content/themes/saatchi/images/st3.png">ACTIVATION</p>
+				<div class="popup3 popup">
+					<p>Saatchi & Saatchi has grown from a start-up advertising agency in London in 1970 to a global creative communications company headquartered in New York with 130 offices in 70 countries and over 6500 employees.  </p>
+					<a href="#">ACTIVATION ></a>
+				</div>
+			</div>
+
+			<div class="item item4">
+				<p class="title"><img src="/wp-content/themes/saatchi/images/st4.png">ACQUISITION</p>
+				<div class="popup4 popup">
+					<p>Saatchi & Saatchi has grown from a start-up advertising agency in London in 1970 to a global creative communications company headquartered in New York with 130 offices in 70 countries and over 6500 employees.  </p>
+					<a href="#">ACQUISITION ></a>
+				</div>
+			</div>
+
+			<div class="item item5">
+				<p class="title"><img src="/wp-content/themes/saatchi/images/st5.png">OPERATIONS</p>
+				<div class="popup5 popup">
+					<p>Saatchi & Saatchi has grown from a start-up advertising agency in London in 1970 to a global creative communications company headquartered in New York with 130 offices in 70 countries and over 6500 employees.  </p>
+					<a href="#">OPERATIONS ></a>
+				</div>
+			</div>
+
 		</div>
 	</div>
 	</div>

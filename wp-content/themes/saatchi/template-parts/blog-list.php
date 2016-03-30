@@ -16,7 +16,7 @@ $args = array(
 $query = new WP_Query( $args );
 if ( $query->have_posts() ) {
 ?>
-<section class="media-boxes cf">
+<section class="media-boxes cf blog">
     <?php while ( $query->have_posts() ) {
         $query->the_post();
     ?>

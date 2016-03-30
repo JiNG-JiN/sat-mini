@@ -15,12 +15,12 @@ $args = array(
 $query = new WP_Query( $args );
 if ( $query->have_posts() ) {
 ?>
-<section class="media-boxes cf">
 <h4>Latest Blog</h4>
+<section class="media-boxes cf blog-slideshow">
     <?php while ( $query->have_posts() ) {
         $query->the_post();
     ?>
-        <article class="media-box hover show" style="width: <?php echo $style_width;?>" data-url="<?php the_permalink(); ?>">
+        <article class="media-box hover show slide" style="width: <?php echo $style_width;?>" data-url="<?php the_permalink(); ?>">
             <header>
                 <hgroup>
                 <h2><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h2>
