@@ -18146,6 +18146,17 @@ if ( typeof define === 'function' && define.amd ) {
 			if ( this.$('.detail-container').length > 0 ) this.$detailContainer = this.$('.detail-container');
 			if ( this.$('.people-list').length > 0 ) this.peopleList = new PeopleList({ el: '.people-list' });
 			if ( this.$('.hero-slideshow').length > 0 ) this.heroSlideshow = new HeroSlideshow({ el: '.hero-slideshow' });
+			
+			if ( this.$('.blog-slideshow').length > 0 && $(window).width() < 961) {
+				this.blogSlideshow = new HeroSlideshow({ el: '.blog-slideshow' });
+				this.blogSlideshow.pause();
+			}
+			
+			if ( this.$('.events-slideshow').length > 0 && $(window).width() < 961) {
+				this.eventsSlideshow = new HeroSlideshow({ el: '.events-slideshow' });
+				this.eventsSlideshow.pause();
+			}	
+			
 			if ( this.$('.media-slideshow').length > 0 ) this.$('.media-slideshow').each(function() {
 				this.mediaSlideshow = new MediaSlideshow({ el: $(this) });
 			});

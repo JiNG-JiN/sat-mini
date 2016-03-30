@@ -519,11 +519,19 @@
 	height:0px;
 }
 
-.ms-slide-info {position: absolute;}
+.ms-slide-info {position: absolute;left:18%;top:30% !important}
 .ms-slide-info.ms-dir-v {top:0;}
-.ms-slide-info.ms-dir-h {width:100%;}
+.ms-slide-info.ms-dir-h {max-width:1300px;}
 .ms-slide-info .ms-info-empty{display:none;}
-
+.ms-slide-info .ms-info {
+    color: #ffffff;
+    font-size: 0.9em;
+    font-weight: normal;
+    line-height: 1em;
+    margin: 0;
+    text-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+}
 .ms-pattern.ms-patt-1  {background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABRJREFUeNpiYICA/wzoDGTwHyDAADXxAv4Eq8S5AAAAAElFTkSuQmCC);}
 .ms-pattern.ms-patt-2  {background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhJREFUeNpiYECA/wxogLAANoBdF0CAAQD+agT8l3ocpQAAAABJRU5ErkJggg==);}
 .ms-pattern.ms-patt-3  {background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACxJREFUeNqU0EENAAAMwkD8m+4s7PhCCmHbGijxE0jS1HOOhxJSUhf9eAIMAI/CEe94Ny14AAAAAElFTkSuQmCC);}
@@ -775,8 +783,8 @@ only screen and (                min-resolution: 2dppx) {
 
 .ms-skin-black-1 .ms-bullets.ms-dir-h {
 	position: absolute;
-	bottom: 20px;
-	right: 50%;
+	bottom: 4em !important;
+	right: 80%; 
 	width: 100px;
 }
 
@@ -785,18 +793,32 @@ only screen and (                min-resolution: 2dppx) {
 	right: -50%;
 }
 
-.ms-skin-black-1 .ms-bullet {
+/* .ms-skin-black-1 .ms-bullet {
 	width: 9px;
 	height: 9px;
 	background: white;
 	margin: 4px;
 	border: solid 1px rgb(58, 58, 58);
+} */
+.ms-skin-black-1 .ms-bullet {
+	background: rgba(255, 255, 255, 0.5) none repeat scroll 0 0;
+    height: 0.4em;
+    transform: translateZ(0px);
+    width: 2em;
 }
-
+.ms-skin-black-1 .ms-bullet span {
+    background: #ffffff none repeat scroll 0 0;
+    display: block;
+    height: 100%;
+    width: 0;
+}
 .ms-skin-black-1 .ms-bullet-selected {
-    background-color: black;
+   /*  background-color: black; */
 }
-
+.ms-skin-black-1 .ms-bullet-selected span {
+    transition: width 4s ease-in 0s;
+    width: 100%;
+}
 .ms-skin-black-1 .ms-tooltip{
 	position: absolute;
 	z-index: 210;
@@ -2480,7 +2502,9 @@ only screen and (                min-resolution: 2dppx) {
 	color: white;
 	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.04);
 }
-
+@media only screen and (max-width: 1024px) {
+  .ms-slide-info{left:14%;}
+}
 /* retina */
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
