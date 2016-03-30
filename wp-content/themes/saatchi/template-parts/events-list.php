@@ -19,14 +19,14 @@ $n = '0';
 	<div class="part7">
 		<div class="content-container">
 			<h4>Upcoming Events</h4>
-			<ul class="clearer">
+			<ul class="events-slideshow clearer">
             <?php while ( $query->have_posts() ) {
                 $query->the_post();
                 $n++;
                 $st_date = saatchi_event_st(get_post_meta( get_the_ID(), 'saatchi_events_st', true ));
                 $location = esc_html(get_post_meta( get_the_ID(), 'saatchi_events_location', true ));
             ?>
-                <li class="<?php echo $class . $n?>">
+                <li class="<?php echo $class . $n?> slide">
                 <header><h2><?php the_title();?></h2></header>
 				<div class="content">
                 <p class="post-on"><?php echo $st_date; ?></p>
