@@ -65,9 +65,9 @@ var imgLoaded = function(img) { img.className = img.className ? img.className + 
             <?php if (isset($office_logo) && ($office_logo != '')): ?>
             <h1><a href="<?php echo site_url() ?>" style="background:url('<?php echo $styles_path . '/assets/image/' . $office_logo;?>') left center no-repeat">Saatchi &amp; Saatchi</a></h1>
             <?php else: ?>
-            <h1><a href="<?php echo site_url() ?>">Saatchi &amp; Saatchi</a></h1>
+            <h1><a href="http://en.saatchi.com.cn/">Saatchi &amp; Saatchi</a></h1>
             <?php endif; ?>
-            <h2><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Greater China</a></h2>
+            <h2><a href="http://en.saatchi.com.cn/">Greater China</a></h2>
         </hgroup>
       </div><!-- end .full-width -->
 
