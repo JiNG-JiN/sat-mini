@@ -217,7 +217,7 @@ $theme_path = get_template_directory_uri();
 	<div class="part7">
 		<div class="content-container">
 			<h4>Upcoming Events</h4>
-			<?php set_query_var('limit', 3); get_template_part( 'template-parts/events-list', get_post_format() );?>
+			<?php set_query_var('limit', 3); get_template_part( 'template-parts/top-events-list', get_post_format() );?>
 		</div>
 	</div>
 </div>
