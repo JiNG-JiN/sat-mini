@@ -117,6 +117,16 @@ function saatchi_widgets_init() {
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>',
     ) );
+
+    register_sidebar( array(
+        'name' => esc_html__( 'Contact Footer Widget Area', 'saatchi' ),
+        'id' => 'contact-footer-widget-area',
+        'description' => __( 'The contact us footer widget area', 'saatchi' ),
+        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
 }
 add_action( 'widgets_init', 'saatchi_widgets_init' );
 

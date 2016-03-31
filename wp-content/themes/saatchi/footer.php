@@ -16,14 +16,9 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="footer-top">
 			<div class="full-width cf">
-				<form id="contact-us" onsubmit="return false">
-					<h4>Contact Us</h4>
-					<input type="text" class="name" name="name" val="" placeholder="NAME"/>
-					<input type="text" class="email" name="e-mail" val="" placeholder="E-MAIL"/>
-					<textarea name="message" class="message"></textarea>
-					<p class="defaultText">MESSAGE</p>
-					<button type="submit">SUBMIT</button>
-				</form>
+                <?php if (is_active_sidebar( 'contact-footer-widget-area' )):?>
+                <?php dynamic_sidebar( 'contact-footer-widget-area' ); ?>
+                <?php endif;?>
 				<dl>
 					<dt>e-Commerce</dt>
 					<dd>Strategy</dd>
