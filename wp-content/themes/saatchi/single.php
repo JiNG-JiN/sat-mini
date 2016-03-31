@@ -35,7 +35,7 @@ get_header(); ?>
 
 	</div><!-- #primary -->
     <hr class="shadow">
-	<div id="primary" class="full-width cf">
+	<div class="full-width cf">
     <?php
 			get_template_part( 'template-parts/latest-blog', get_post_format() );
     ?>

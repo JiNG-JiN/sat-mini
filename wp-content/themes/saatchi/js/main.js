@@ -104,4 +104,9 @@ function resizeWidth(){
 	$('.part5 li,.part6 .media-boxes article,.part7 li').css('width',$width/3);
 	$('.footer-top dl,.footer-top form').css('width',$width2/3);
 	$('.part6 .media-boxes article:last').css('margin-right',0);
+	
+	/* var $marginL = parseInt($('.page-child .events li').css('margin-left'),10);
+	var $widthEvents = $('.page-child .events').width()- 8*$marginL;
+	$('.page-child .events li').css('width',$widthEvents/4); */
+	
 }

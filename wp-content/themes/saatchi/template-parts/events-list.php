@@ -16,10 +16,8 @@ if(($event = $query->have_posts())):
 $class = 'item';
 $n = '0';
 ?>
-	<div class="part7">
-		<div class="content-container">
-			<h4>Upcoming Events</h4>
-			<ul class="events-slideshow clearer">
+
+			<ul class="events events-slideshow clearer">
             <?php while ( $query->have_posts() ) {
                 $query->the_post();
                 $n++;
@@ -38,6 +36,5 @@ $n = '0';
 				</div>
 			</li>
             <?php } // end while ?>
-		</div>
-	</div>
+			</ul>
     <?php endif;?>
