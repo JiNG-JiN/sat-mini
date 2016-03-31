@@ -33,6 +33,10 @@ $slug = $post->post_name;
                     case 'eshopper':
                         get_template_part( 'template-parts/top', get_post_format() );
                         break;
+                    case 'events':
+                        set_query_var('limit', 12);
+                        get_template_part( 'template-parts/events-list', get_post_format() );
+                        break;
                     default:
                         /* Start the Loop */
                         while ( have_posts() ) : the_post();
