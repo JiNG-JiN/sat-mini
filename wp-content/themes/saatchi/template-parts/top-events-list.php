@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying Event list page.
+ * Template part for displaying eshooper top page  Event list.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -16,7 +16,6 @@ if(($event = $query->have_posts())):
 $class = 'item';
 $n = '0';
 ?>
-
 			<ul class="events events-slideshow clearer">
             <?php while ( $query->have_posts() ) {
                 $query->the_post();
