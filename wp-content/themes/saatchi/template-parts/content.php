@@ -58,7 +58,7 @@
                 <?php echo $content;?>
                 </div>
             </aside>
-</div>
+        </div>
         <?php
         }
     ?>
